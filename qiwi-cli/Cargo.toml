@@ -1,0 +1,28 @@
+[package]
+name = "qiwi-cli"
+version = "0.1.0"
+description = "Qiwi command line tools"
+repository = "https://github.com/vorot93/qiwi-rs"
+authors = ["Artem Vorotnikov <artem@vorotnikov.me>"]
+categories = ["cli"]
+license = "MIT"
+edition = "2018"
+
+[badges]
+travis-ci = { repository = "vorot93/qiwi-rs" }
+maintenance = { status = "actively-developed" }
+
+[dependencies]
+async-trait = "*"
+chrono = { version = "*", features = ["serde"] }
+bigdecimal = { version = "0.1", features = ["serde"] }
+env_logger = "*"
+phonenumber = "*"
+qiwi = { version = "0.1", path = "../qiwi" }
+serde = { version = "1", features = ["derive"] }
+structopt = "*"
+tokio = { version = "0.2", features = ["full"] }
+tokio-util = { version = "0.2", features = ["full"] }
+toml = "*"
+url = "2"
+xdg = "*"
